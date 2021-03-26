@@ -15,12 +15,12 @@
 		</thead>
 
 		<tbody>
-			<c:forEach var="position" items="${positions }">
+			<c:forEach var="dto" items="${dtos }">
 				<tr>
-					<td>${position.position }</td>
-					<td>${position.kia }</td>
-					<td>${position.nc }</td>
-					<td>${position.lotte }</td>
+					<td>${dto.position }</td>
+					<td>${dto.kia }</td>
+					<td>${dto.nc }</td>
+					<td>${dto.lotte }</td>
 				</tr>
 			</c:forEach>
 		</tbody>

@@ -33,7 +33,7 @@
 				<li class="nav-item"><a class="nav-link" href="/team">팀 목록</a></li>
 				<li class="nav-item"><a class="nav-link" href="/player/playerRegForm">선수 등록</a></li>
 				<li class="nav-item"><a class="nav-link" href="/player">선수 목록</a></li>
-				<li class="nav-item"><a class="nav-link" href="/position">포지션 별 팀 선수 목록</a></li>
+				<li class="nav-item"><a class="nav-link" href="/player/positionList">포지션 별 팀 선수 목록</a></li>
 			</ul>
 		</div>
 	</nav>

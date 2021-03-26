@@ -18,6 +18,7 @@ import com.cos.baseball.domain.team.Team;
 import com.cos.baseball.service.PlayerService;
 import com.cos.baseball.service.TeamService;
 import com.cos.baseball.web.dto.CMRespDto;
+import com.cos.baseball.web.dto.PositionRespDto;
 import com.cos.baseball.web.dto.player.PlayerSaveReqDto;
 
 import lombok.RequiredArgsConstructor;
@@ -56,6 +57,13 @@ public class PlayerController {
 	public @ResponseBody CMRespDto<?> delete(@PathVariable int id) {
 		playerService.선수삭제(id);
 		return new CMRespDto<>(1,null);
+	}
+	
+	@GetMapping("/player/positionList")
+	public String positionList(Model model) {
+		List<PositionRespDto> dtos = playerService.포지션별선수리스트();
+		model.addAttribute("dtos", dtos);
+		return "player/positionList";
 	}
 	
 }
