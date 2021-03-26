@@ -23,7 +23,7 @@ public class PositionController {
 	@GetMapping("/position")
 	public String findByPositionPivot(Model model){
 		JpaResultMapper result = new JpaResultMapper();
-		Query q = em.createNativeQuery("select position, MAX(IF(teamId = 5, name, \\\"\\\")) kia, MAX(IF(teamId = 6, name, \\\"\\\")) nc, MAX(IF(teamId = 7, name, \\\"\\\")) lotte FROM player GROUP BY position");
+		Query q = em.createNativeQuery("select position, MAX(IF(teamId = 1, name, \\\"\\\")) kia, MAX(IF(teamId = 2, name, \\\"\\\")) nc, MAX(IF(teamId = 3, name, \\\"\\\")) lotte FROM player GROUP BY position");
 		List<PositionRespDto> resultList = result.list(q, PositionRespDto.class);
 		model.addAttribute("positions", resultList);
 		

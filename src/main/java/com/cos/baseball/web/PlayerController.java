@@ -45,7 +45,7 @@ public class PlayerController {
 		return "redirect:/player";
 	}
 	
-	@GetMapping({"/player","/"})
+	@GetMapping({"/player"})
 	public String findAll(Model model) {
 		List<Player> players = playerService.선수목록();
 		model.addAttribute("players", players);

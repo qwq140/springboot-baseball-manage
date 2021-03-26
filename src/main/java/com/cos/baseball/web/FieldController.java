@@ -35,7 +35,7 @@ public class FieldController {
 		return "redirect:/field";
 	}
 	
-	@GetMapping("/field")
+	@GetMapping({"/field","/"})
 	public String findAll(Model model) {
 		List<Field> fields = fieldService.구장목록();
 		model.addAttribute("fields", fields);
